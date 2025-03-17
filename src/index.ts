@@ -1,5 +1,5 @@
-const a:number = 0;
+const a: number = 0;
 
-(function () {
-    console.log('ok',a);
+(() => {
+	console.log("ok", a);
 })();
