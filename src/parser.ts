@@ -26,7 +26,7 @@ export function parseTemplate(template: string): Instruction[] {
 			// セルフクロージングタグの場合
 			if (template[nextTagIndex - 1] === "/") {
 				const tag = template.substring(tagIndex + 1, nextTagIndex - 1);
-				instructions.push({ type: "elementEnd", tag });
+				instructions.push({ type: "elementStart", tag, attributes: {} });
 			} else {
 				// 閉じタグの場合
 				if (template[tagIndex + 1] === "/") {
