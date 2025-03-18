@@ -1,5 +1,4 @@
-const a: number = 0;
+import { parseTemplate } from "./parser";
 
-(() => {
-	console.log("ok", a);
-})();
+const instructions = parseTemplate("<div>Hello,mzkmnk!! {{ todo }}!</div>");
+console.log(instructions);
