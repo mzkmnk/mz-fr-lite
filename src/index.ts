@@ -1,4 +1,10 @@
 import { parseTemplate } from "./parser";
+import { MzRenderer } from "./renderer";
 
 const instructions = parseTemplate("<div>Hello,mzkmnk!! {{ todo }}!</div>");
-console.log(instructions);
+
+const renderer = new MzRenderer();
+
+for (const instruction of instructions) {
+	renderer.createElement(instruction.type);
+}
